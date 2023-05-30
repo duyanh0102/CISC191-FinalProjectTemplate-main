@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 import java.util.List;
+
 public class StudentListTest {
 
     private StudentList studentList;
@@ -21,6 +22,7 @@ public class StudentListTest {
 
         List<Student> students = studentList.students;
 
+        // Assert that the student list contains exactly one student and that it is the added student
         Assertions.assertEquals(1, students.size());
         Assertions.assertEquals(student, students.get(0));
     }
@@ -34,6 +36,7 @@ public class StudentListTest {
 
         List<String> studentNames = studentList.getStudentNames();
 
+        // Assert that the returned student names match the expected names
         List<String> expectedNames = Arrays.asList("John Cena", "Jane Joe");
         Assertions.assertEquals(expectedNames, studentNames);
     }
